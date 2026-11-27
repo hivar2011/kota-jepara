@@ -1,0 +1,498 @@
+
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    background: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVBAR */
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(35, 35, 35, 0.95);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: 800;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.logo span,
+footer h2 span {
+    color: #d9a441;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-menu a {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #d9a441;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+    color: white;
+    font-size: 27px;
+    cursor: pointer;
+}
+
+/* HOME */
+.hero {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.65)),
+        url('https://beritamuria.com/wp-content/uploads/2024/08/wisata-kura-kura-ocean-park-foto-quthub-muhammad.webp')
+        center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 650px;
+    color: white;
+}
+
+.subtitle {
+    color: #e7b451;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 65px;
+    line-height: 1.2;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #e7b451;
+}
+
+.hero-content p {
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 28px;
+    border: none;
+    border-radius: 5px;
+    background: #d9a441;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #ad7922;
+    transform: translateY(-3px);
+}
+
+/* GENERAL SECTION */
+.section {
+    padding: 100px 10%;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title > p:first-child {
+    color: #c28c30;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.section-title h2 {
+    font-size: 35px;
+    color: #292929;
+    font-weight: 700;
+}
+
+.gallery-description {
+    max-width: 600px;
+    margin: 15px auto 0;
+    color: #777;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* ABOUT */
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+}
+
+.about-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 10px 10px 0 #e9c982;
+}
+
+.about-text h3,
+.history-text h3 {
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.about-text p,
+.history-text p {
+    font-size: 14px;
+    line-height: 2;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.about-text .btn {
+    margin-top: 15px;
+}
+
+/* HISTORY */
+.history {
+    background: #f8f5ef;
+}
+
+.history-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.history-image img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* GALLERY */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.gallery-item {
+    position: relative;
+    height: 260px;
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.12);
+}
+
+.gallery-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 25px;
+    color: white;
+    background: linear-gradient(
+        transparent,
+        rgba(0,0,0,0.85)
+    );
+}
+
+.gallery-overlay h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.gallery-overlay p {
+    font-size: 12px;
+}
+
+/* CONTACT */
+.contact {
+    background: #f8f5ef;
+}
+
+.contact-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 50px;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.contact-item {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.contact-item span {
+    width: 50px;
+    height: 50px;
+    background: #e9c982;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.contact-item h3 {
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-item p {
+    font-size: 13px;
+    color: #777;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-family: inherit;
+    font-size: 13px;
+    background: white;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #d9a441;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form .btn {
+    align-self: flex-start;
+}
+
+/* FOOTER */
+footer {
+    background: #252525;
+    text-align: center;
+    padding: 50px 20px 20px;
+    color: white;
+}
+
+footer h2 {
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+footer > p {
+    font-size: 13px;
+    color: #bbb;
+}
+
+.footer-menu {
+    margin: 25px 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.footer-menu a {
+    color: #ddd;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.footer-menu a:hover {
+    color: #d9a441;
+}
+
+.copyright {
+    border-top: 1px solid #444;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+/* RESPONSIVE TABLET */
+@media (max-width: 900px) {
+    .section {
+        padding: 80px 6%;
+    }
+
+    .about-container,
+    .history-container {
+        gap: 30px;
+    }
+
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 650px) {
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background: #252525;
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+    }
+
+    .nav-menu li {
+        padding: 15px;
+        border-top: 1px solid #444;
+    }
+
+    #menu-toggle:checked ~ .nav-menu {
+        display: flex;
+    }
+
+    .hero {
+        min-height: 650px;
+        padding: 100px 7%;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 43px;
+    }
+
+    .hero-content p {
+        font-size: 13px;
+    }
+
+    .section {
+        padding: 70px 7%;
+    }
+
+    .section-title h2 {
+        font-size: 27px;
+    }
+
+    .about-container,
+    .history-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-image img,
+    .history-image img {
+        height: 280px;
+    }
+
+    .history-image {
+        order: -1;
+    }
+
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item {
+        height: 250px;
+    }
+
+    .contact-container {
+        gap: 35px;
+    }
+
+    .footer-menu {
+        gap: 15px;
+    }
+}
